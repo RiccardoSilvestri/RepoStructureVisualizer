@@ -60,6 +60,31 @@ def generate_markdown_tree(nested_tree):
     lines.append('```\n\n')
     return ''.join(lines)
 
+def get_language_from_extension(file_name):
+    extension_to_language = {
+        '.py': 'python',
+        '.js': 'javascript',
+        '.java': 'java',
+        '.cpp': 'cpp',
+        '.c': 'c',
+        '.html': 'html',
+        '.css': 'css',
+        '.md': 'markdown',
+        '.json': 'json',
+        '.xml': 'xml',
+        '.sh': 'bash',
+        '.php': 'php',
+        '.rb': 'ruby',
+        '.go': 'go',
+        '.ts': 'typescript',
+        '.sql': 'sql',
+        '.yml': 'yaml',
+        '.yaml': 'yaml',
+        '.txt': 'text',
+    }
+    _, extension = os.path.splitext(file_name)
+    return extension_to_language.get(extension, 'text')
+
 def create_markdown_content(project_structure, root_folder):
     content = "# Project Structure\n\n## Directory Tree\n\n"
     nested_tree = build_nested_tree(project_structure)
@@ -77,7 +102,8 @@ def create_markdown_content(project_structure, root_folder):
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     file_content = f.read().strip()
-                content += f"\n```python\n{file_content}\n```\n"
+                language = get_language_from_extension(file)
+                content += f"\n```{language}\n{file_content}\n```\n"
             except Exception as e:
                 content += f"\n*Error reading {file}: {str(e)}*\n"
         
