@@ -4,13 +4,62 @@ from tkinter import filedialog
 
 def should_ignore_folder(folder_name):
     ignore_folders = {
-        '.idea', '__pycache__', '.vscode', '.vs', 'nbproject', '.settings',
-        '.git', '.svn', '.hg',
+        # IDE e Editor
+        '.idea', '.vscode', '.vs', 'nbproject', '.settings', '.metadata', 'xcuserdata',
+        '*.xcworkspace', '*.xcodeproj/xcuserdata', '.history', '.sublime-workspace',
+        '.ropeproject', '.vim', 'emacs.d', '.spacemacs.d', '.kdev4', '.komodoproject',
+        
+        # Version Control
+        '.git', '.svn', '.hg', 'CVS', '.bzr',
+        
+        # Environments and Dependencies
         'env', 'venv', '.venv', 'node_modules', 'vendor', 'bower_components', 'jspm_packages',
+        '__pypackages__', '.pytest_cache', '.mypy_cache', '.yarn', 'Pods', 'DerivedData',
+        'elm-stuff', '_esy', '.cargo', '.dub', '.dart_tool', '.flutter-plugins', '.pub-cache',
+        '.clj-kondo', '.lsp', '.shadow-cljs', '.bloop', '.metals', '.ammonite', '.ensime_cache',
+        '.bsp', '.gradle', '.mvn', '.lein-*', '.nvm', '.npm', '.pnpm', '.yvm',
+        
+        # Build e Output
         'build', 'dist', 'out', 'bin', 'obj', 'target', 'deps', '_build', 'release',
-        '.cache', '.npm', '.sass-cache', '.gradle', 'logs', 'temp', 'tmp',
-        'coverage', '.jest',
-        '.next', '.nuxt', 'public'
+        'cmake-build-*', 'dist-ssr', 'dist-server', '.build', 'out-tsc', 'Debug', 'Release',
+        'x64', 'ipch', '.externalNativeBuild', 'captures', 'generated', 'compiled',
+        
+        # Cache e Temp
+        '.cache', '.sass-cache', '.parcel-cache', '.nyc_output', '.jest-cache', '.fusebox',
+        '.temp', '.tmp', '.turbo', '.rush', '.lazy', '.eslintcache', '.stylelintcache',
+        
+        # Testing e Coverage
+        'coverage', '.jest', 'lcov-info', '.nyc_output', '.allure', '.pytest',
+        
+        # Framework and Library
+        '.next', '.nuxt', 'public', '.expo', '.svelte-kit', '.quasar', '.astro', '.serverless',
+        '.terraform', '.terragrunt-cache', '.nextflow', '.scrapy', '.spago', '.redwood',
+        '.angular', '.vuepress', '.docusaurus', '.gatsby', '.hexo', '.jekyll', '.middleman',
+        '.react-static', '.sapper', '.stencil', '.storybook', '.vite', '.webpack',
+        
+        # Other
+        '.ipynb_checkpoints', '.hypothesis', 'wwwroot', '.replit', '.Trash', 'lost+found',
+        '.direnv', '.envs', '.cache', '.logs', '.pids', '.ssh', '.vagrant', '.vscode-test',
+        '.vsconfig', '.vspscc', '.vssscc', '.vsix', '.vscodeignore', '.vsixmanifest',
+        
+        # OS and System Generated
+        '.DS_Store', 'Thumbs.db', 'Desktop.ini', '$RECYCLE.BIN', '.Spotlight-V100', '.TemporaryItems',
+        
+        # Cloud and Infrastructure
+        '.serverless', '.cdk.out', '.pulumi', '.sst', '.amplify', '.aws-sam', '.cloudformation',
+        
+        # Database and Data
+        '.sqlite', '.index', '.leveldb', '.rocksdb', '.mongodb', '.mysql', '.postgres',
+        
+        # Specific Languages
+        '.classpath', '.project', '.factorypath', '.apt_generated',
+        '.cquery_results', '.ccls-cache',
+        '.deps', '.libs', '.aux',
+        '.stack-work', 'dist-newstyle',
+        '_opam', '_build',
+        '.phpintel', '.phpunit.result.cache',
+        '.rspec', '.ruby-version', '.ruby-gemset',
+        '.swc', '.tsbuildinfo',
     }
     return folder_name in ignore_folders
 
