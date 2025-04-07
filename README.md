@@ -54,8 +54,7 @@ RepoStructureVisualizer is a tool to analyze the structure of a directory and ge
 │   └── TrafficBulletin.swift
 ├── service/
 │   └── CallAtm.swift
-├── .gitignore
-└── icon.png
+└── .gitignore
 ```
 
 ## File Details
@@ -80,10 +79,10 @@ RepoStructureVisualizer is a tool to analyze the structure of a directory and ge
 .cxx
 local.properties
 ```
-
+### activity
 - `FermataDetailView.swift`
 
-```text
+```swift
 import SwiftUI
 import MapKit
 
@@ -171,7 +170,7 @@ struct FermataDetailView: View {
 ```
 - `FermateListView.swift`
 
-```text
+```swift
 import SwiftUI
 
 struct FermateListView: View {
@@ -244,7 +243,7 @@ struct FermateListView: View {
 ```
 - `HeaderView.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 
@@ -282,7 +281,7 @@ struct HeaderView: View {
 ```
 - `LinesActivityAroundMe.swift`
 
-```text
+```swift
 import SwiftUI
 import CoreLocation
 
@@ -329,7 +328,7 @@ struct LinesActivityAroundMe: View {
 ```
 - `MainActivity.swift`
 
-```text
+```swift
 import SwiftUI
 
 struct MainActivity: View {
@@ -430,7 +429,7 @@ struct MainActivity: View {
 ```
 - `NewsActivity.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 
@@ -452,7 +451,7 @@ struct NewsActivity: View {
 ```
 - `StopActivity.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 import MapKit
@@ -483,7 +482,7 @@ struct StopActivity: View {
 ```
 - `StopAdapter.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 
@@ -499,7 +498,7 @@ struct StopAdapter: View {
 ```
 - `StopInfoView.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 
@@ -524,7 +523,7 @@ struct StopInfoView: View {
 ```
 - `TransportTabBarView.swift`
 
-```text
+```swift
 import Foundation
 import SwiftUI
 
@@ -551,7 +550,7 @@ struct TransportTabBarView: View {
 ### api
 - `ApiFermata.swift`
 
-```text
+```swift
 import Foundation
 
 struct ApiFermata: Codable, Identifiable {
@@ -578,7 +577,7 @@ struct ApiFermata: Codable, Identifiable {
 ```
 - `ApiListaMezzi.swift`
 
-```text
+```swift
 import Foundation
 import Foundation
 
@@ -595,7 +594,7 @@ struct ApiListaMezzi: Codable, CustomStringConvertible {
 ```
 - `ApiMezzo.swift`
 
-```text
+```swift
 import Foundation
 import Foundation
 
@@ -609,7 +608,7 @@ struct ApiMezzo: Codable {
 ### controller
 - `FindAroundMeHelper.swift`
 
-```text
+```swift
 import Foundation
 import CoreLocation
 class FindAroundMeHelper: NSObject, CLLocationManagerDelegate {
@@ -653,7 +652,7 @@ class FindAroundMeHelper: NSObject, CLLocationManagerDelegate {
 ```
 - `RicercaAroundMe.swift`
 
-```text
+```swift
 import Foundation
 import CoreLocation
 
@@ -683,7 +682,7 @@ class RicercaAroundMe {
 ```
 - `RicercaInfoFermata.swift`
 
-```text
+```swift
 class RicercaInfoFermata {
     func infoFermata(input: String, completion: @escaping ([ApiFermata]) -> Void) {
         Task {
@@ -720,7 +719,7 @@ class RicercaInfoFermata {
 ```
 - `RicercaInfoMezzo.swift`
 
-```text
+```swift
 import Foundation
 
 class RicercaInfoMezzo {
@@ -738,7 +737,7 @@ class RicercaInfoMezzo {
 ```
 - `RicercaMezzi.swift`
 
-```text
+```swift
 import Foundation
 
 class RicercaMezzi {
@@ -769,7 +768,7 @@ class RicercaMezzi {
 ```
 - `RicercaNews.swift`
 
-```text
+```swift
 import Foundation
 
 class RicercaNews {
@@ -788,7 +787,7 @@ class RicercaNews {
 ### model
 - `Category.swift`
 
-```text
+```swift
 import Foundation
 
 struct Category: Codable {
@@ -807,7 +806,7 @@ struct Category: Codable {
 ```
 - `CodableValue.swift`
 
-```text
+```swift
 import Foundation
 
 struct CodableValue: Codable {
@@ -857,7 +856,7 @@ struct CodableValue: Codable {
 ```
 - `Fermata.swift`
 
-```text
+```swift
 struct Fermata: Codable {
     var code: String?
     var description: String?
@@ -904,7 +903,7 @@ struct Fermata: Codable {
 ```
 - `JourneyPatterns.swift`
 
-```text
+```swift
 import Foundation
 struct JourneyPatterns: Codable {
     var journeyPatterns: [ListaMezzi]
@@ -916,7 +915,7 @@ struct JourneyPatterns: Codable {
 ```
 - `Line.swift`
 
-```text
+```swift
 import Foundation
 
 struct Line: Codable {
@@ -941,7 +940,7 @@ struct Line: Codable {
 ```
 - `LineInfo.swift`
 
-```text
+```swift
 import Foundation
 
 struct LineInfo: Codable {
@@ -968,7 +967,7 @@ struct LineInfo: Codable {
 ```
 - `Link.swift`
 
-```text
+```swift
 import Foundation
 
 struct Link: Codable {
@@ -985,7 +984,7 @@ struct Link: Codable {
 ```
 - `ListaMezzi.swift`
 
-```text
+```swift
 import Foundation
 
 struct ListaMezzi: Codable {
@@ -1010,7 +1009,7 @@ struct ListaMezzi: Codable {
 ```
 - `Location.swift`
 
-```text
+```swift
 import Foundation
 
 struct Location: Codable {
@@ -1025,7 +1024,7 @@ struct Location: Codable {
 ```
 - `Mezzo.swift`
 
-```text
+```swift
 import Foundation
 
 struct Mezzo: Codable {
@@ -1046,7 +1045,7 @@ struct Mezzo: Codable {
 ```
 - `News.swift`
 
-```text
+```swift
 import Foundation
 
 struct News: Codable {
@@ -1069,7 +1068,7 @@ struct News: Codable {
 ```
 - `Stop.swift`
 
-```text
+```swift
 import Foundation
 
 struct Stop: Codable {
@@ -1092,7 +1091,7 @@ struct Stop: Codable {
 ```
 - `TrafficBulletin.swift`
 
-```text
+```swift
 import Foundation
 
 struct TrafficBulletin: Codable {
@@ -1112,7 +1111,7 @@ struct TrafficBulletin: Codable {
 ### service
 - `CallAtm.swift`
 
-```text
+```swift
 import Foundation
 
 struct CallAtm {
